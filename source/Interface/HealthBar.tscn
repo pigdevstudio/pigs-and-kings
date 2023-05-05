@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlwdeo6vfecvj"]
+
+[ext_resource type="Texture2D" uid="uid://dyk5ieebipxe7" path="res://Assets/Kings and Pigs/12-Live and Coins/Live Bar.png" id="1_2p4s0"]
+[ext_resource type="Texture2D" uid="uid://b1d047fvt3r3f" path="res://Assets/Kings and Pigs/12-Live and Coins/Small Heart Idle (18x14).png" id="2_8fmbg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsclt"]
+atlas = ExtResource("2_8fmbg")
+region = Rect2(2, 0, 18, 14)
+
+[node name="HealthBar" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1480.0
+offset_bottom = -966.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2p4s0")
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 25.0
+offset_right = 293.0
+offset_bottom = 89.0
+theme_override_constants/separation = -27
+
+[node name="HeartTextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wsclt")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeartTextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wsclt")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HeartTextureRect3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_wsclt")
+expand_mode = 2
+stretch_mode = 5

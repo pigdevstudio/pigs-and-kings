@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://catig0qxs560e"]
+
+[ext_resource type="SpriteFrames" uid="uid://bmb3bimiqii7o" path="res://Assets/Kings and Pigs/11-Door/DoorSpriteFrames.tres" id="1_wcoqr"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("1_wcoqr")
+animation = &"idle"
+offset = Vector2(0, -28)

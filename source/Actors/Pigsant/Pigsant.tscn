@@ -1,0 +1,388 @@
+[gd_scene load_steps=37 format=3]
+
+[ext_resource type="Script" path="res://Actors/Pigsant/Pigsant.gd" id="1_rgetd"]
+[ext_resource type="Texture2D" uid="uid://dyfkss685lr0u" path="res://Assets/Kings and Pigs/03-Pig/Idle (34x28).png" id="2_kq8xt"]
+[ext_resource type="Texture2D" uid="uid://dhs7wgf66icti" path="res://Assets/Kings and Pigs/03-Pig/Run (34x28).png" id="3_iqn7u"]
+[ext_resource type="SpriteFrames" uid="uid://c855o3cjmnu1s" path="res://Assets/Kings and Pigs/13-Dialogue Boxes/!!!SpriteFrames.tres" id="4_i2lh7"]
+[ext_resource type="PackedScene" path="res://Recipes/Platformer/07.interactive-area/InteractiveArea2D.tscn" id="5_6nydq"]
+[ext_resource type="FontFile" uid="uid://fbxdyn186ebu" path="res://Interface/Fonts/Kenney Thick.ttf" id="6_fmhmn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ru4mw"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(0, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksooc"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(34, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qqmb"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(68, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbb16"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(102, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrpcs"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(136, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm6r3"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(170, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hf7t"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(204, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x485q"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(238, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcbhn"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(272, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4c6m"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(306, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1anap"]
+atlas = ExtResource("2_kq8xt")
+region = Rect2(340, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6n3d"]
+atlas = ExtResource("3_iqn7u")
+region = Rect2(0, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cn1bn"]
+atlas = ExtResource("3_iqn7u")
+region = Rect2(34, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ehfgq"]
+atlas = ExtResource("3_iqn7u")
+region = Rect2(68, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h462y"]
+atlas = ExtResource("3_iqn7u")
+region = Rect2(102, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgsw0"]
+atlas = ExtResource("3_iqn7u")
+region = Rect2(136, 0, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alvkj"]
+atlas = ExtResource("3_iqn7u")
+region = Rect2(170, 0, 34, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3y2a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ru4mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksooc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qqmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbb16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrpcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm6r3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hf7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x485q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcbhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4c6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1anap")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6n3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cn1bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ehfgq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h462y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgsw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alvkj")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6862c"]
+size = Vector2(144, 80)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g46mx"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+bg_color = Color(0.156863, 0.156863, 0.207843, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_piw8g"]
+font = ExtResource("6_fmhmn")
+font_size = 12
+
+[sub_resource type="Animation" id="Animation_dg0vp"]
+resource_name = "00.used_be_pigsant"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I used to be just a Pigsant without dreams and desires..."]
+}
+
+[sub_resource type="Animation" id="Animation_h76yl"]
+resource_name = "01.before"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["but this was before..."]
+}
+
+[sub_resource type="Animation" id="Animation_bfdti"]
+resource_name = "02.revolution"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:vertical_alignment")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:horizontal_alignment")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["the revolution"]
+}
+
+[sub_resource type="Animation" id="Animation_nkskn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I used to be just a Pigsant without dreams and desires..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cmwuo"]
+_data = {
+"00.used_be_pigsant": SubResource("Animation_dg0vp"),
+"01.before": SubResource("Animation_h76yl"),
+"02.revolution": SubResource("Animation_bfdti"),
+"RESET": SubResource("Animation_nkskn")
+}
+
+[sub_resource type="Animation" id="Animation_nayas"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y6tly"]
+resource_name = "display_text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_c0wa7"]
+resource_name = "pop_label"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15),
+"transitions": PackedFloat32Array(0.5, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqp7n"]
+_data = {
+"RESET": SubResource("Animation_nayas"),
+"display_text": SubResource("Animation_y6tly"),
+"pop_label": SubResource("Animation_c0wa7")
+}
+
+[node name="Pigsant" type="Node2D"]
+position = Vector2(880, 512)
+script = ExtResource("1_rgetd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-16, -56)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_b3y2a")
+animation = &"idle"
+
+[node name="ExclamationBalloon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -100)
+scale = Vector2(4, 4)
+sprite_frames = ExtResource("4_i2lh7")
+animation = &"in"
+
+[node name="InteractiveArea2D" parent="." instance=ExtResource("5_6nydq")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveArea2D"]
+position = Vector2(-32, -40)
+shape = SubResource("RectangleShape2D_6862c")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -176.0
+offset_top = -192.0
+offset_right = 168.0
+offset_bottom = -88.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(168, 104)
+theme_override_styles/normal = SubResource("StyleBoxFlat_g46mx")
+text = "I used to be just a Pigsant without dreams and desires..."
+label_settings = SubResource("LabelSettings_piw8g")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+libraries = {
+"": SubResource("AnimationLibrary_cmwuo")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sqp7n")
+}
+
+[connection signal="interacted" from="InteractiveArea2D" to="." method="_on_interactive_area_2d_interacted"]
+[connection signal="interaction_available" from="InteractiveArea2D" to="." method="_on_interactive_area_2d_interaction_available"]
+[connection signal="interaction_unavailable" from="InteractiveArea2D" to="." method="_on_interactive_area_2d_interaction_unavailable"]

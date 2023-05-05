@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Recipes/Platformer/07.interactive-area/InteractiveArea2D.tscn" id="1_f7f8b"]
+[ext_resource type="Script" path="res://Recipes/Platformer/09.portal/Portal2D.gd" id="2_csd11"]
+
+[node name="Portal2D" instance=ExtResource("1_f7f8b")]
+script = ExtResource("2_csd11")
+next_scene_path = null
+target_portal_name = "Portal2D"
+
+[connection signal="interaction_available" from="." to="." method="_on_interaction_available"]

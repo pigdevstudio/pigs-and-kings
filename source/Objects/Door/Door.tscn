@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" uid="uid://dxtyfkrqedu4r" path="res://Recipes/Platformer/09.portal/Portal2D.tscn" id="1_ntoum"]
+[ext_resource type="Script" path="res://Objects/Door/Door.gd" id="2_ux5j5"]
+[ext_resource type="PackedScene" uid="uid://catig0qxs560e" path="res://Objects/Door/DoorAnimatedSprites.tscn" id="3_o441t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vejo"]
+size = Vector2(44, 54)
+
+[node name="Door" instance=ExtResource("1_ntoum")]
+script = ExtResource("2_ux5j5")
+
+[node name="AnimatedSprite2D" parent="." index="0" instance=ExtResource("3_o441t")]
+animation = &"closing"
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -116)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_4vejo")
+debug_color = Color(0, 0.635294, 0.396078, 0.419608)
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
