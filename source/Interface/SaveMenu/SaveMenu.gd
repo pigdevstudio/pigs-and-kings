@@ -2,6 +2,10 @@ extends Control
 
 @export_file("*.tscn") var main_menu_scene_path = "res://Screens/MainMenu.tscn"
 
+func _ready():
+	print()
+
+
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		visible = not visible
@@ -14,6 +18,7 @@ func _on_save_button_pressed():
 
 
 func _on_main_menu_button_pressed():
+	# Save before quitting
 	get_tree().change_scene_to_file(main_menu_scene_path)
 
 
