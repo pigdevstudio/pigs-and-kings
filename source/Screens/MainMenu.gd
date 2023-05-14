@@ -6,20 +6,11 @@ extends Control
 
 func _ready():
 	$StartButton.grab_focus()
-	load_input_map()
+	load_input_settings()
 
 
-func load_input_map():
-	if not FileAccess.file_exists("user://input.json"):
-		return
-
-	var file = FileAccess.open("user://input.json", FileAccess.READ)
-	var dictionary = JSON.parse_string(file.get_as_text())
-	for action in dictionary.keys():
-		var event = InputEventKey.new()
-		event.physical_keycode = dictionary[action]
-		InputMap.action_erase_events(action)
-		InputMap.action_add_event(action, event)
+func load_input_settings():
+	pass
 
 
 func _on_start_button_pressed():
