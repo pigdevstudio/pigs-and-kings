@@ -7,4 +7,9 @@ func _on_back_button_pressed():
 
 
 func save_input_settings():
-	pass
+	var file = FileAccess.open("user://input.json", FileAccess.WRITE)
+	var dictionary = {}
+	for child in $RemappingControl.get_children():
+		var action = child.get_child(0).binding_action
+		dictionary[action] = InputMap.action_get_events(action)[0].physical_keycode
+	file.store_string(JSON.stringify(dictionary))
