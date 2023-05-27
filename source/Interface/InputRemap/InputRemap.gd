@@ -1,5 +1,7 @@
 extends Control
 
+const CONTROL_SETTINGS_FILE_PATH = "user://control_settings.json"
+
 
 func _on_back_button_pressed():
 	save_input_settings()
@@ -7,7 +9,7 @@ func _on_back_button_pressed():
 
 
 func save_input_settings():
-	var file = FileAccess.open("user://input.json", FileAccess.WRITE)
+	var file = FileAccess.open(CONTROL_SETTINGS_FILE_PATH, FileAccess.WRITE)
 	var dictionary = {}
 	for child in $RemappingControl.get_children():
 		var action = child.get_child(0).binding_action

@@ -1,5 +1,7 @@
 extends Control
 
+const CONTROL_SETTINGS_FILE_PATH = "user://control_settings.json"
+
 @export_file("*.tscn") var start_scene_path = "res://Levels/Level1.tscn"
 @export_file("*.tscn") var controls_scene_path = "res://Interface/InputRemap/InputRemap.tscn"
 
@@ -10,10 +12,10 @@ func _ready():
 
 
 func load_input_map():
-	if not FileAccess.file_exists("user://input.json"):
+	if not FileAccess.file_exists(CONTROL_SETTINGS_FILE_PATH):
 		return
 
-	var file = FileAccess.open("user://input.json", FileAccess.READ)
+	var file = FileAccess.open(CONTROL_SETTINGS_FILE_PATH, FileAccess.READ)
 	var dictionary = JSON.parse_string(file.get_as_text())
 	for action in dictionary.keys():
 		var event = InputEventKey.new()
